@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WorkoutService } from '../../services/workout.service';
 
 import { NavController } from 'ionic-angular';
@@ -9,10 +9,14 @@ import { NavController } from 'ionic-angular';
   providers: [WorkoutService]
 })
 export class WorkoutsPage {
-  constructor(public navCtrl: NavController, private _wokoutservice: WorkoutService) {
+  
+  constructor(public navCtrl: NavController, private _workoutservice: WorkoutService) {
   }
 
-  // getWorkouts(){
-  //   this._wokoutserive
-  // }
+  ngOnInit(){
+    this._workoutservice.getWorkouts().subscribe(workouts =>{
+      console.log(workouts);
+    })
+    console.log('Init Ran..')
+  }
 }
