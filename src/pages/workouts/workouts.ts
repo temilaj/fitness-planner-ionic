@@ -14,14 +14,19 @@ export class WorkoutsPage {
 
   constructor(public navCtrl: NavController, public navParams : NavParams, private _workoutservice: WorkoutService) {
     this.nav = navCtrl;
-    
+    // this._workoutservice.getWorkouts().subscribe(workouts =>{
+    //   this.workouts = workouts;
+    // })
   }
 
-  ngOnInit(){
-    console.log('Init Ran..')
+  ionViewWillEnter(){
     this._workoutservice.getWorkouts().subscribe(workouts =>{
       this.workouts = workouts;
-      console.log(this.workouts);
+    })
+  }
+  ngOnInit(){
+    this._workoutservice.getWorkouts().subscribe(workouts =>{
+      this.workouts = workouts;
     })
   }
 
@@ -29,6 +34,5 @@ export class WorkoutsPage {
     this.nav.push(WorkoutDetailsPage,{
       workout: workout
     })
-    console.log(workout);
   }
 }

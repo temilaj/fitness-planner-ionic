@@ -7,7 +7,7 @@
 <ion-content padding *ngIf="workout">
     <ion-card>
         <ion-card-header>
-            <strong>{{workout.title}}</strong> {{workout.title}}
+            <strong>Title:</strong> {{workout.title}}
         </ion-card-header>
         <ion-card-content>
             <p>
@@ -24,7 +24,7 @@
                 </button>
             </ion-col>
             <ion-col text-right>
-                <button ion-button clear small color="danger" icon-left>
+                <button (click)="deleteWorkout(workout._id.$oid)" ion-button clear small color="danger" icon-left>
                     <ion-icon name='trash'></ion-icon>
                     Delete
                 </button>

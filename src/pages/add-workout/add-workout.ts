@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { WorkoutsPage } from '../workouts/workouts'
 import { WorkoutService } from '../../services/workout.service';
 
 @Component({
@@ -25,11 +26,13 @@ export class AddWorkoutPage{
             note: this.note,
             type: this.type,
         }
-        console.log(workout);
+        // console.log(workout);
         this._workoutService.addWorkout(workout).subscribe(data => {
             this.result = data;
         },
         err => console.log(err),
         () => console.log('Workout Added'));
+
+        this.navCtrl.setRoot(WorkoutsPage);
     }
 }
