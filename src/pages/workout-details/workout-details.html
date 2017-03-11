@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Workout details</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="workout">
+    <ion-card>
+        <ion-card-header>
+            <strong>{{workout.title}}</strong> {{workout.title}}
+        </ion-card-header>
+        <ion-card-content>
+            <p>
+                <strong>Type: </strong> {{workout.type}}
+            </p>
+            <hr> {{workout.note}}
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="primary" icon-left>
+                    <ion-icon name='star'></ion-icon>
+                    Favorite
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button ion-button clear small color="danger" icon-left>
+                    <ion-icon name='trash'></ion-icon>
+                    Delete
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>

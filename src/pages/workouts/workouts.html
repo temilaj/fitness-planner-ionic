@@ -6,6 +6,11 @@
 
 <ion-content padding>
     <h2>Workouts</h2>
+    <ion-list *ngIf="workouts">
+        <ion-item *ngFor="let workout of workouts" (click)="workoutSelected($event, workout)">
+            {{workout.title}}
+        </ion-item>
+    </ion-list>
     <!--<p>
         This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
     </p>
