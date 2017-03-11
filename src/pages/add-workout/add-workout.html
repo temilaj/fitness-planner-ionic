@@ -6,6 +6,34 @@
 
 <ion-content padding>
     <h2>Add Workout</h2>
+    <form (submit)="onSubmit()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Title</ion-label>
+                <ion-input [(ngModel)]="title" name="title" type="text" value=""></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Note</ion-label>
+                <ion-input [(ngModel)]="note" name="note" type="textarea"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Type</ion-label>
+                <ion-select [(ngModel)]="type" name="type">
+                    <ion-option value="Running">Running</ion-option>
+                    <ion-option value="Free Weights">Free Weights</ion-option>
+                    <ion-option value="Elliptical">Elliptical</ion-option>
+                    <ion-option value="Boxing">Boxing</ion-option>
+                    <ion-option value="Aerobics">Aerobics</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <button type="submit" ion-button full>Full Button</button>
+            </ion-item>
+        </ion-list>
+    </form>
     <!--<p>
         This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
     </p>
