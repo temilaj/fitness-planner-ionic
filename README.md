@@ -1,6 +1,10 @@
 # Fitness Planner
 Simple fitness planning directory application using angular2 and the ionic framework
 
+## Setting up
+To run Ionic 2 projects, you’ll need to install the latest version of ionic CLI and Cordova. Before you do that, you’ll need a recent version of Node.js and run.
+`npm install -g ionic cordova`
+
 ## Development server
 Run `ionic serve` for a dev server. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
 
