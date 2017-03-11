@@ -8,6 +8,6 @@ Run `ionic serve` for a dev server. Navigate to `http://localhost:8100/`. The ap
 
 Run `ionic run ios` to deploy the application to an ios simulator or device
 
-## Running end-to-end tests
+## Running the app on android
 
 Run `ionic run android` to deploy the application to an android emulator or device
